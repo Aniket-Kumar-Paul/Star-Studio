@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import CoverVideo from '../components/CoverVideo'
 import Logo from '../components/Logo'
+import Navbar from '../components/Navbar'
 
 const Section = styled.section`
 position: relative;
@@ -14,7 +15,7 @@ const Home = () => {
         <Section>
             <CoverVideo />
             <Logo />
-            <h1>NavBar</h1>
+            <Navbar />
         </Section>
     )
 }
