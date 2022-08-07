@@ -146,7 +146,7 @@ const Shop = () => {
                     end: pinWrapWidth,
                     scrub: true,
                     pin: true,
-                    markers: true,
+                    // markers: true,
                     scroller: '.App' // locomotive element
                 },
                 // increasing scrolling height of this section same as the scrolling element width
@@ -161,7 +161,7 @@ const Shop = () => {
                     start: 'top top',
                     end: pinWrapWidth,
                     scrub: true,
-                    markers: true,
+                    // markers: true,
                     scroller: '.App' // locomotive element
                 },
                 // increasing scrolling height of this section same as the scrolling element width
@@ -173,7 +173,8 @@ const Shop = () => {
         }, 1000)
 
         return () => {
-
+            t1.kill();
+            ScrollTrigger.kill();
         }
     }, [])
 
