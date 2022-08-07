@@ -2,7 +2,6 @@
 // WE HAVE TO USE SCROLLER PROXY PROVIDED BY GSAP
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import React from 'react'
 import { useEffect } from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
