@@ -15,6 +15,10 @@ const NavContainer = styled(motion.div)`
     align-items: center;
 
     transition: all 0.3s ease;
+
+    @media (max-width: 40em) {
+        top: ${props => props.click ? '0' : `calc(-50vh-4rem)`};
+    }
 `
 
 const MenuItems = styled(motion.ul)`
@@ -29,7 +33,13 @@ const MenuItems = styled(motion.ul)`
     align-items: center;
 
     width: 100%;
-    padding: 0 10rem;
+    padding: 0 10rem;   
+    
+    @media (max-width: 40em) {
+        flex-direction: column;
+        padding: 2rem 0;
+        height: 50vh;
+    } 
 `
 
 const MenuBtn = styled.li`
@@ -55,18 +65,28 @@ const MenuBtn = styled.li`
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
+
+    @media (max-width: 40em) {
+        width: 10rem;
+        height: 2rem;
+    } 
 `
 
 const MenuItem = styled(motion.li)`
     text-transform: uppercase;
     color: ${props => props.theme.text};;
     cursor: pointer;
+
+    @media (max-width: 40em) {
+        flex-direction: column;
+        padding: 0.5rem 0;
+    } 
 `
 
 function Navbar() {
     const [click, setClick] = useState(false)
 
-    const {scroll} = useLocomotiveScroll();
+    const { scroll } = useLocomotiveScroll();
     const handleScroll = (id) => {
         let ele = document.querySelector(id);
         setClick(!click);
@@ -74,9 +94,9 @@ function Navbar() {
             {
                 offset: '-100',
                 duration: '2000',
-                easing: [0.25,0.0,0.35,1.0]
+                easing: [0.25, 0.0, 0.35, 1.0]
             }
-            )
+        )
     }
 
     return (
@@ -104,22 +124,22 @@ function Navbar() {
             >
                 <MenuBtn onClick={() => setClick(!click)}>Menu</MenuBtn>
                 <MenuItem
-                onClick={() => handleScroll('#home')}
+                    onClick={() => handleScroll('#home')}
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.9, Y: 0 }}
                 >Home</MenuItem>
                 <MenuItem
-                onClick={() => handleScroll('.about')}
+                    onClick={() => handleScroll('.about')}
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.9, Y: 0 }}
                 >About</MenuItem>
                 <MenuItem
-                onClick={() => handleScroll('#shop')}
+                    onClick={() => handleScroll('#shop')}
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.9, Y: 0 }}
                 >Shop</MenuItem>
                 <MenuItem
-                onClick={() => handleScroll('#new-arrival')}
+                    onClick={() => handleScroll('#new-arrival')}
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.9, Y: 0 }}
                 >New Arrivals</MenuItem>
