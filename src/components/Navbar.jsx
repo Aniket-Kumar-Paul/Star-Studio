@@ -36,9 +36,8 @@ const MenuItems = styled(motion.ul)`
     padding: 0 10rem;   
     
     @media (max-width: 40em) {
-        flex-direction: column;
-        padding: 2rem 0;
-        height: 50vh;
+        flex-wrap: wrap;
+        padding: 0 2rem;
     } 
 `
 
