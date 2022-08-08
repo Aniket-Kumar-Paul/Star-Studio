@@ -40,7 +40,7 @@ const Overlay = styled.div`
     height: 90vh;
     border: 3px solid ${props => props.theme.body};
     z-index: 11;
-    box-shadow: 0 0 0 5vw ${props => props.theme.text};
+    box-shadow: 0 0 0 4vw ${props => props.theme.text};
 `
 
 const Title = styled.h1`
@@ -148,7 +148,7 @@ const NewArrival = () => {
     }, [])
 
     return (
-        <Section ref={ref}>
+        <Section ref={ref} id="new-arrival">
             <Overlay />
             <Title
                 data-scroll
