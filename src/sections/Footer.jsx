@@ -129,7 +129,7 @@ const Footer = () => {
                 <h3
                     data-Scroll
                     data-scroll-speed="-1"
-                >Wibe Studio</h3>
+                >Star Studio</h3>
             </LogoContainer>
             <FooterComponent
                 initial={{ y: "-400px" }}
